@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Card content (contact data, document list) lives in `src/lib/card-data.ts`, texts in `src/lib/i18n.ts` (DE/EN); keep components free of hard-coded contact data so one edit updates every copy/share/vCard spot.
+- Documents are served as Lovable Assets in `src/assets/docs/` as `<id>.pdf` plus page images `<id>-<n>.jpg`; the viewer shows images because iOS shows only the first PDF page in an iframe.
+- External maps load only after the visitor opens the map window, so no third-party request happens on page load.
